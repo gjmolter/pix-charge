@@ -87,11 +87,25 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 The `merchantKey` can be any DICT key: Email, CPF, CNPJ, Telephone or EVP
 
-- Email: gjmolter.1997@gmail.com (regular email string)
-- CPF: 12345678900 (11 characters, no separators)
-- CPF: 00038166000105 (14 characters, no separators)
-- Telephone: +5561912345678 (string starting with +, then country code, area code and actual phone number)
-- EVP: 123e4567-e12b-12d1-a456-426655440000 (string with lowercase characters with separators)
+- **Email**: gjmolter.1997@gmail.com (regular email string)
+
+- **CPF**: 12345678900 (11 characters, no separators)
+
+- **CPF**: 00038166000105 (14 characters, no separators)
+
+- **Telephone**: +5561912345678 (string starting with +, then country code, area code and actual phone number)
+
+- **EVP**: 123e4567-e12b-12d1-a456-426655440000 (string with lowercase characters with separators)
+
+## Wanna buy me a beer?
+
+If this lib has helped you and you want to support further development, you can do a Pix transfer using this QR Code:
+
+![Donation QRCode](https://cdn-std.droplr.net/files/acc_519625/MTgEQK)
+
+or copying-and-pasting this BR Code:
+
+`00020126450014br.gov.bcb.pix0123gjmolter.1997@gmail.com5204000053039865802BR5914GABRIEL MOLTER63044E95`
 
 ## More info from BCB
 
