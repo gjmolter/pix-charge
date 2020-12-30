@@ -62,6 +62,8 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 ### staticPix()
 
+`staticPix({ object })`. object:
+
 | param        | type    | required |
 | ------------ | ------- | -------- |
 | merchantKey  | string  | ✅       |
@@ -74,6 +76,8 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 ### dinamicPix()
 
+`dinamicPix({ object })`. object:
+
 | param        | type    | required |
 | ------------ | ------- | -------- |
 | merchantName | string  | ✅       |
@@ -85,7 +89,7 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 ### merchantKey
 
-The `merchantKey` can be any DICT key: Email, CPF, CNPJ, Telephone or EVP
+The `merchantKey` can be any DICT key:
 
 - **Email**: gjmolter.1997@gmail.com (regular email string)
 
