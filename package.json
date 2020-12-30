@@ -1,0 +1,39 @@
+{
+  "name": "pix-charge",
+  "version": "1.0.0",
+  "description": "Library to generate BCB's Pix Payment BR Code",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "node dist/demo/example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjmolter/pix-charge.git"
+  },
+  "keywords": [
+    "pix",
+    "bacen",
+    "bcb",
+    "brcode",
+    "qrcode",
+    "pagamento",
+    "br-code",
+    "qr-code",
+    "brasil",
+    "pagamento",
+    "payment",
+    "gerar",
+    "generator"
+  ],
+  "author": "Gabriel Molter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gjmolter/pix-charge/issues"
+  },
+  "homepage": "https://github.com/gjmolter/pix-charge#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.16",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {}
+}
