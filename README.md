@@ -5,7 +5,9 @@
 [bundlephobia-url]: https://bundlephobia.com/result?p=pix-charge
 [bundlephobia-image]: https://badgen.net/bundlephobia/minzip/pix-charge
 
-Library to generate BCB's Pix Payment BR Code
+![pixLogo](https://cdn-std.droplr.net/files/acc_519625/Ql2F31)
+
+Library to generate BCB's Pix Payment BR Code 💸
 
 ## Install 📦
 
@@ -32,6 +34,22 @@ let brCode = staticPix({
 
 This lib was created with the goal of being as small and simple as possible, therefore, it only creates the BR Code.
 If you need to transform it into a QR Code, there are many ways to do it. I recomend using the `qrcode` lib. Here is an example:
+
+First, install the `qrcode` lib:
+
+```bash
+#NPM
+npm i qrcode
+
+#YARN
+yarn add qrcode
+```
+
+Then import it into your application:
+
+```js
+import QRCode from "qrcode";
+```
 
 On your HTML, create an Canvas element with an id
 
