@@ -5,7 +5,7 @@
 [bundlephobia-url]: https://bundlephobia.com/result?p=pix-charge
 [bundlephobia-image]: https://badgen.net/bundlephobia/minzip/pix-charge
 
-![pixLogo](https://cdn-std.droplr.net/files/acc_519625/Ql2F31)
+![pixLogo](https://cdn-std.droplr.net/files/acc_519625/NU7Nzk)
 
 Library to generate BCB's Pix Payment BR Code 💸
 
@@ -22,11 +22,27 @@ yarn add pix-charge
 ## Usage ✍️
 
 ```js
-import { dinamicPix, staticPix } from "pix-charge";
+import { staticPix } from "pix-charge";
 
+// Payer will set transfer value
 let brCode = staticPix({
   merchantKey: "gjmolter.1997@gmail.com",
   merchantName: "Gabriel Molter",
+});
+
+// Transfer value is pre-defined.
+let brCodeWithValue = staticPix({
+  merchantKey: "gjmolter.1997@gmail.com",
+  merchantName: "Gabriel Molter",
+  amount: 1.99,
+});
+
+// Transfer value is pre-defined and has charge description
+let brCodeWithValue = staticPix({
+  merchantKey: "gjmolter.1997@gmail.com",
+  merchantName: "Gabriel Molter",
+  amount: 1.99,
+  description: "Candy Bar", // Will show up as a label describing to the payer what they are being charged for
 });
 ```
 
@@ -80,9 +96,9 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 ### staticPix()
 
-`staticPix({ object })`. object:
+`staticPix({ object })`:
 
-| param        | type    | required |
+| object key   | type    | required |
 | ------------ | ------- | -------- |
 | merchantKey  | string  | ✅       |
 | merchantName | string  | ✅       |
@@ -94,13 +110,13 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 
 ### dinamicPix()
 
-`dinamicPix({ object })`. object:
+`dinamicPix({ object })`:
 
-| param        | type    | required |
+| object key   | type    | required |
 | ------------ | ------- | -------- |
 | merchantName | string  | ✅       |
 | location     | string  | ✅       |
-| amount       | number  | ❌       |
+| amount       | number  | ✅       |
 | merchantCity | string  | ❌       |
 | merchantCep  | string  | ❌       |
 | isUnique     | boolean | ❌       |

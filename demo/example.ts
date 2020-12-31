@@ -1,7 +1,7 @@
 import { dinamicPix, staticPix } from "../src/index";
 
 // SIMPLEST EXAMPLE (STATIC)
-// No amount, so user can choose the value by themselves.
+// No amount, so users can choose the value by themselves.
 
 console.log(
   staticPix({
