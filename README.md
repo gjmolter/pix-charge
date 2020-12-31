@@ -34,11 +34,11 @@ let brCode = staticPix({
 let brCodeWithValue = staticPix({
   merchantKey: "gjmolter.1997@gmail.com",
   merchantName: "Gabriel Molter",
-  amount: 1.99,
+  amount: 500,
 });
 
 // Transfer value is pre-defined and has charge description
-let brCodeWithValue = staticPix({
+let brCodeWithDescription = staticPix({
   merchantKey: "gjmolter.1997@gmail.com",
   merchantName: "Gabriel Molter",
   amount: 1.99,
