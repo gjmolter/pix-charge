@@ -21,7 +21,8 @@ console.log(
     description: 'Buy me a beer',
     isUnique: true,
     merchantCep: '25680010',
-    merchantCity: 'Petrópolis'
+    merchantCity: 'Petrópolis',
+    identifier: '0001'
   })
 );
 

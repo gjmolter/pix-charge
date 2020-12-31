@@ -46,6 +46,10 @@ let brCodeWithDescription = staticPix({
 });
 ```
 
+This last one will generate the following payment screen when read:
+
+![PixNubank](https://cdn-std.droplr.net/files/acc_519625/P5wLpm)
+
 ## QRCode 🤳
 
 This lib was created with the goal of being as small and simple as possible, therefore, it only creates the BR Code.
@@ -106,6 +110,7 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 | merchantCity | string  | ❌       |
 | merchantCep  | string  | ❌       |
 | description  | string  | ❌       |
+| identifier   | string  | ❌       |
 | isUnique     | boolean | ❌       |
 
 ### dinamicPix()
@@ -119,6 +124,7 @@ QRCode.toCanvas(document.getElementById("canvas"), brCode, (error) => {
 | amount       | number  | ✅       |
 | merchantCity | string  | ❌       |
 | merchantCep  | string  | ❌       |
+| identifier   | string  | ❌       |
 | isUnique     | boolean | ❌       |
 
 ### merchantKey

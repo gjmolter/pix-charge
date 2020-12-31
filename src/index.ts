@@ -22,6 +22,7 @@ type ParamsStatic = {
   merchantCity?: string
   merchantCep?: string
   description?: string
+  identifier?: string
   isUnique?: boolean
 }
 
@@ -32,6 +33,7 @@ export function staticPix({
   merchantCity,
   merchantCep,
   description,
+  identifier,
   isUnique
 }: ParamsStatic ): string {
 
@@ -40,6 +42,7 @@ export function staticPix({
   const merchantCityF = formatText(merchantCity || "");
   const merchantCepF = formatText(merchantCep || "");
   const descriptionF = formatText(description || "");
+  const identifierF = formatText(identifier || "");
   const amountF = amount ? amount.toFixed(2).toString() : "0";
 
   // Check for input problems
@@ -94,6 +97,11 @@ export function staticPix({
     brCode.push(`61${addLeftZero(merchantCepF.length)}${merchantCepF}`); // Merchant CEP
   }
 
+  if (identifierF !== "") {
+    brCode.push(`62${identifierF.length + 38}`)
+    brCode.push(`05${addLeftZero(identifierF.length)}${identifierF}`) // Additional Data Field
+}
+
   brCode.push("6304"); // CRC16
 
   var brCodeString = brCode.join("");
@@ -106,6 +114,7 @@ type ParamsDinamic = {
   merchantCep?: string
   amount: number
   location: string
+  identifier?: string
   isUnique?: boolean
 }
 
@@ -115,6 +124,7 @@ export function dinamicPix({
   merchantCep,
   amount,
   location,
+  identifier,
   isUnique
 } : ParamsDinamic) : string {
   // Get formatted variables
@@ -123,6 +133,7 @@ export function dinamicPix({
   const merchantCepF = formatText(merchantCep || "");
   const amountF = amount ? amount.toFixed(2).toString() : "0";
   const locationF = location.replace('https://', '')
+  const identifierF = formatText(identifier || "");
 
   // Check for input problems
   if (merchantNameF.length < 1 || locationF.length < 1 || amountF.length < 1) {
@@ -168,7 +179,13 @@ export function dinamicPix({
     brCode.push(`61${addLeftZero(merchantCepF.length)}${merchantCepF}`); // Merchant CEP
   }
 
-  brCode.push("62070503***") // Additional Data Field
+  
+  if (identifierF !== "") {
+    brCode.push(`62${identifierF.length + 38}`)
+    brCode.push(`05${addLeftZero(identifierF.length)}${identifierF}`)
+  } else {
+    brCode.push("62070503***") // Additional Data Field
+  }
 
   brCode.push("6304"); // CRC16
 

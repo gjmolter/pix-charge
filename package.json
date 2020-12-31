@@ -1,6 +1,6 @@
 {
   "name": "pix-charge",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Library to generate BCB's Pix Payment BR Code",
   "main": "dist/src/index.js",
   "scripts": {
