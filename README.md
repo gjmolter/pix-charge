@@ -53,7 +53,7 @@ This last one will generate the following payment screen when read:
 ## QRCode 🤳
 
 This lib was created with the goal of being as small and simple as possible, therefore, it only creates the BR Code.
-If you need to transform it into a QR Code, there are many ways to do it. I recomend using the `qrcode` lib. Here is an example:
+If you need to transform it into a QR Code, there are many ways to do it. I recommend using the `qrcode` lib. Here is an example:
 
 First, install the `qrcode` lib:
 
@@ -71,7 +71,7 @@ Then import it into your application:
 import QRCode from "qrcode";
 ```
 
-On your HTML, create an Canvas element with an id
+On your HTML, create a Canvas element with an id
 
 ```html
 <canvas id="canvas"></canvas>
@@ -135,7 +135,7 @@ The `merchantKey` can be any DICT key:
 
 - **CPF**: 12345678900 (11 characters, no separators)
 
-- **CPF**: 00038166000105 (14 characters, no separators)
+- **CNPJ**: 00038166000105 (14 characters, no separators)
 
 - **Telephone**: +5561912345678 (string starting with +, then country code, area code and actual phone number)
 
