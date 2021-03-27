@@ -5,7 +5,7 @@
 [bundlephobia-url]: https://bundlephobia.com/result?p=pix-charge
 [bundlephobia-image]: https://badgen.net/bundlephobia/minzip/pix-charge
 
-![pixLogo](https://cdn-std.droplr.net/files/acc_519625/NU7Nzk)
+![pixLogo](https://i.imgur.com/gXG5xeG.png)
 
 Library to generate BCB's Pix Payment BR Code 💸
 
